@@ -40,6 +40,9 @@ Array    (
 )
 ```
 
+##Installation:
+
+Just put the uroll.drush.inc file in your ~/.drush directory.
 
 
 ##Benefits:
