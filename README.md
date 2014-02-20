@@ -1,7 +1,7 @@
 drush-uroll
 ===========
 
-Update Rollback
+###Update Rollback
 
 When you are writting complicated drupal module update functions it's often necessary to run the update function over and over.
 
@@ -12,38 +12,36 @@ module manually and then you'll be running your test update function again just 
 
 BUT why do that when a simple drush module can do it for you.
 
-Examples:
- drush uroll --module=becker_general --version=12       Rollback the system table so that drupal think it has not run the update for becker_general version 12 
+## Example:
+Rollback the system table so that drupal think it has not run the update for becker_general version 12 
 
-Options:
+```
+ drush uroll --module=becker_general --version=12       
+```
+## Options:
  --module                                  module to change the update function version on 
+
  --version                                 Version to set to roll back to
 
 
-Output:
+##Output:
 
 I'm leaving the debugging output in there for now.  It just prints the data structure of the version that the update function is currently at, and then the data structure of the 
 system table element after the uroll has run.  This just gives you a warm fuzzy feeling that it actually did something.
 
 The output should look something like this:
 
-<code>
-drush uroll --module=vcd_admin --version=2
-Array
-(
-    [name] => vcd_admin
-    [schema_version] => 3
-)
-Array
-(
+```
+drush uroll --module=vcd_admin --version=2  
+Array   (    [name] => vcd_admin   [schema_version] => 3   )    
+Array    (
     [name] => vcd_admin
     [schema_version] => 2
 )
+```
 
-</code>
 
 
-Benefits:
+##Benefits:
 
-By writing more and more update functions you'll learn the guts of drupal quickly and eventually not have to repeat a bunch of error pron mouse clicks on a production server.  
-This drush module will hopefully ease some of the pain in writting module update functions.
+By writing more and more update functions you'll learn the guts of drupal quickly and eventually not have to repeat a bunch of error pron mouse clicks on a production server. 
