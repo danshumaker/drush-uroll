@@ -13,10 +13,10 @@ module manually and then you'll be running your test update function again just 
 BUT why do that when a simple drush module can do it for you.
 
 ## Example:
-Rollback the system table so that drupal think it has not run the update for becker_general version 12 
+Rollback the system table so that drupal thinks it has not run the update for myJeff_module version 12 
 
 ```
- drush uroll --module=becker_general --version=12       
+ drush uroll --module=myJeff_module --version=12       
 ```
 ## Options:
  --module                                  module to change the update function version on 
