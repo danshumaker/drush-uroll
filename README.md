@@ -25,7 +25,7 @@ Rollback the system table so that drupal thinks it has not run the update for my
  --version                                 Version to set to roll back to
 
 
-##Output:
+## Output:
 
 I'm leaving the debugging output in there for now.  It just prints the data structure of the version that the update function is currently at, and then the data structure of the 
 system table element after the uroll has run.  This just gives you a warm fuzzy feeling that it actually did something.
@@ -41,11 +41,11 @@ Array    (
 )
 ```
 
-##Installation:
+## Installation:
 
 Just put the uroll.drush.inc file in your ~/.drush directory.
 
 
-##Benefits:
+## Benefits:
 
 By writing more and more update functions you'll learn the guts of drupal quickly and eventually not have to repeat a bunch of error pron mouse clicks on a production server. 
