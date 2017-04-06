@@ -3,11 +3,12 @@ drush-uroll
 
 ###Update Rollback
 
-When you are writting complicated drupal module update functions it's often necessary to run the update function over and over.
+When you are writting complicated drupal module update functions it's often necessary to run and re-run the update function over and over for testing purposes
+until you reach perfection.
 
 But when you run "drush updb" after the required update function has already been run, your drush updb will simply say there is 
 nothing to update.  But, but, I want to run the update again you say!
-And since your a well accomplished drupal developer you could go into the mysql system table and modify the version of the 
+And since you are a well accomplished drupal developer you could go into the mysql system table and modify the version of the 
 module manually and then you'll be running your test update function again just fine. 
 
 BUT why do that when a simple drush module can do it for you.
